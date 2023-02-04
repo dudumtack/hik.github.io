@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/event_cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:src="@drawable/x"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="권이커가\n 새끼 발가락을 \n찍혔습니다!"
+        android:gravity="center"
+        android:textSize="45dp"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:src="@drawable/toe_break"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/light"
+        android:text="새끼 발가락을 찍혔습니다! \n고통으로 인해 정신적 피로도가 10\n 증가하며 발가락 골절로 인해\n 육체적 피로도가 5 증가 합니다"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_margin="15dp"/>
+
+</LinearLayout>

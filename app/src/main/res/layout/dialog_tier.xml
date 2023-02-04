@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minWidth="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="랭겜 돌리기"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/title"
+            android:gravity="center"
+            android:background="#A1EFAB"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tier_tier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tier_1"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아이언"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/play_rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="게임하기(랭킹)"
+                android:textSize="@dimen/select"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/tier_im1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"
+                    android:layout_margin="5dp"/>
+
+                <ImageView
+                    android:id="@+id/tier_im2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"
+                    android:layout_margin="5dp"/>
+                <ImageView
+                    android:id="@+id/tier_im3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"
+                    android:layout_margin="5dp"/>
+                <ImageView
+                    android:id="@+id/tier_im4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"
+                    android:layout_margin="5dp"/>
+                <ImageView
+                    android:id="@+id/tier_im5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="승급하기 위해서는 5번중 3번 이상 승리하셔야 합니다"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+
+        <TextView
+            android:id="@+id/tier_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="0%"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="정신적 피로도 45 +"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+
+    </LinearLayout>
+
+</LinearLayout>

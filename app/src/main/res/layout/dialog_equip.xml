@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minWidth="400dp">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="장비 바꾸기"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/title"
+            android:gravity="center"
+            android:background="#A1EFAB"/>
+
+    <TextView
+        android:id="@+id/equip_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_gravity="bottom"
+        android:text="현재돈 : 00000원"
+        android:textSize="20dp"
+        android:fontFamily="@font/light"/>
+</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/cpu_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:text="cpu 강화"
+                android:textSize="@dimen/select" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/equip_cpu_cost_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0000원"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="+2%"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:id="@+id/equip_cpu_now_enforce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0강(0%)"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/graphic_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="그래픽 강화"
+            android:textSize="@dimen/select"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/equip_graphic_cost_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0000원"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="5%"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:id="@+id/equip_graphic_now_enforce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0강"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <TextView
+            android:id="@+id/mouse_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="마우스, 키보드"
+            android:textSize="@dimen/select"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/medium"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/equip_mouse_cost_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0000원"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="1%"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:id="@+id/equip_mouse_now_enforce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0강"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
