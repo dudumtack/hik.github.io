@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "795114554758",
+    "project_id": "nycat-bd765",
+    "storage_bucket": "nycat-bd765.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795114554758:android:01362916c41e6adeb41807",
+        "android_client_info": {
+          "package_name": "com.example.minigame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795114554758-v46p3opdcbn36vbmne8hce5m5eec824m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.minigame",
+            "certificate_hash": "f36661a81b6e0d4e10357a132970d21c3948e2e5"
+          }
+        },
+        {
+          "client_id": "795114554758-8qq3gq7d9b4qr3jsb8e1gb6o8nen2que.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCid0e3xlE-pW4ESBGtZW8TDvHAaG4dJ4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795114554758-8qq3gq7d9b4qr3jsb8e1gb6o8nen2que.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#BBAED3"
+    xmlns:tools="http://schemas.android.com/tools">
+ <HorizontalScrollView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+  <TextView
+      android:id="@+id/rank_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="1등 OOO의 기록 "
+      android:textSize="30dp"/>
+
+ </HorizontalScrollView>
+
+
+ <TextView
+     android:id="@+id/rank_score"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="40dp"
+     android:gravity="center"
+     android:text="00점"
+     android:textSize="40dp"/>
+ <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+ <TextView
+     android:id="@+id/rank_name2"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:text="2등 OOO의 기록 "
+     android:textSize="30dp"/>
+</HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/rank_score2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        android:gravity="center"
+        android:text="00점"
+        android:textSize="40dp"/>
+
+ <HorizontalScrollView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+  <TextView
+      android:id="@+id/rank_name3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="3등 OOO의 기록 "
+      android:textSize="30dp"/>
+ </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/rank_score3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        android:gravity="center"
+        android:text="00점"
+        android:textSize="40dp"/>
+    <Button
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="게임으로 돌아가기"/>
+</LinearLayout>

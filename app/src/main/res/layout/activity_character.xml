@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:fontFamily="@font/nagijifont"
+            android:text="캐릭터 고르기"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/nyacat"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/amongus"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:fontFamily="@font/nagijifont"
+            android:id="@+id/explane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="캐릭터 설명"
+            android:gravity="center"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
