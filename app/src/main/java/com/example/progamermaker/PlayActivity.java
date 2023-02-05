@@ -37,10 +37,11 @@ public class PlayActivity extends AppCompatActivity {
 
     int Day = 1;
     int money, cpu_up_count, graphic_up_count, tired_physical, tired_mental, mouse_up_count,popular;
+    int tired_physical_max = 100, tired_mental_max = 100;
     int equip_percent = cpu_up_count*2+graphic_up_count*5+mouse_up_count;
     int skill_percent = 0; //위에처럼 적용 그냥 직접 더하기로
     int day_off_re;
-    int tier_5_win = 0;
+    int tier_5_win1,tier_5_win2, tier_5_win3, tier_5_win4, tier_5_win5,tier_5_lose1,tier_5_lose2,tier_5_lose3,tier_5_lose4,tier_5_lose5;
     int nowtier = 1;
     ImageView Charater, Charater_sleep,Tier;
     AnimationDrawable anim;
@@ -217,6 +218,7 @@ public class PlayActivity extends AppCompatActivity {
                                 next_day_set();
                                 day_next = true;
                                 Day_off_event();
+                                refresh();
                             }
                         });
 
@@ -393,7 +395,7 @@ public class PlayActivity extends AppCompatActivity {
         Money_bj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tired_mental + 45 <= 100){
+                if (tired_mental + 45 <= tired_mental_max){
                     tired_mental+=45;
                     popular++;
                     money+= Money_bj_function(popular);
@@ -409,7 +411,7 @@ public class PlayActivity extends AppCompatActivity {
         long_money.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(tired_physical == 0){
+                if(tired_physical + 100 <= tired_mental){
                     money+= 70000;
                     tired_physical+= 100;
                     refresh();
@@ -421,7 +423,7 @@ public class PlayActivity extends AppCompatActivity {
         short_money.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(tired_physical + 35 <= 100){
+                if(tired_physical + 35 <= tired_physical_max){
                     money+= 20000;
                     tired_physical+= 35;
                     refresh();
@@ -431,14 +433,6 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        // '아래 아니오 버튼'처럼 일반적인 방법대로 연결하면 재사용에 용이하고,
-        // '아래 네 버튼'처럼 바로 연결하면 일회성으로 사용하기 편함.
-        // *주의할 점: findViewById()를 쓸 때는 -> 앞에 반드시 다이얼로그 이름을 붙여야 한다.
-
-        // 아니오 버튼
-
-                //dialog01.dismiss(); // 다이얼로그 닫기
-        // 네 버튼
         dialog01.findViewById(R.id.yesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -559,7 +553,7 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     public void Skill_set(int A, int B, int C) {
-        if (tired_mental+C < 100) {
+        if (tired_mental+C < tired_mental_max) {
             TextView Skill_now = dialog03.findViewById(R.id.skill_now);
             Random random = new Random();
             int randomnum = random.nextInt(A - B + 1) + B;
@@ -575,12 +569,32 @@ public class PlayActivity extends AppCompatActivity {
     public void showDialog_mental(){
         if (day_next) {
             dialog04.show(); // 다이얼로그 띄우기
+            TextView M_keyboard = dialog04.findViewById(R.id.m_keyboard);
+            M_keyboard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tired_mental+=30;
+                    tired_mental_max+=5;
+                }
+            });
         }
     }
 
     public void showDialog_physical(){
         if (day_next) {
             dialog05.show(); // 다이얼로그 띄우기
+            TextView P_weight = dialog05.findViewById(R.id.p_weight);
+            P_weight.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (tired_physical_max <= 200){
+                        tired_physical+=30;
+                        tired_physical_max+=5;
+                    }
+
+                }
+            });
+
         }
     }
 
@@ -603,6 +617,32 @@ public class PlayActivity extends AppCompatActivity {
             ImageView tier_tier = dialog07.findViewById(R.id.tier_tier);
             int power = equip_percent+skill_percent-tired_mental;
             tier_percent.setText(power+"%");
+            if (tier_5_win1 == 1){
+                tier_im1.setImageResource(R.drawable.circle);
+            }if (tier_5_win2 == 1){
+                tier_im2.setImageResource(R.drawable.circle);
+            }if (tier_5_win3 == 1){
+                tier_im3.setImageResource(R.drawable.circle);
+            }if (tier_5_win4 == 1){
+                tier_im4.setImageResource(R.drawable.circle);
+            }if (tier_5_win5 == 1){
+                tier_im5.setImageResource(R.drawable.circle);
+            }
+            if (tier_5_lose1 == 1){
+                tier_im1.setImageResource(R.drawable.x);
+            }if (tier_5_lose2 == 1){
+                tier_im2.setImageResource(R.drawable.x);
+            }if (tier_5_lose3 == 1){
+                tier_im3.setImageResource(R.drawable.x);
+            }if (tier_5_lose4 == 1){
+                tier_im4.setImageResource(R.drawable.x);
+            }if (tier_5_lose5 == 1){
+                tier_im5.setImageResource(R.drawable.x);
+            }
+
+
+
+
             if (nowtier == 2) {
                 tier_tier.setImageResource(R.drawable.tier_2);
             }
@@ -618,7 +658,7 @@ public class PlayActivity extends AppCompatActivity {
         tier_play_rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tired_mental + 45 <= 100){
+                if (tired_mental + 45 <= tired_mental_max){
                     tired_mental+=45;
                     refresh();
                     int random_max = 100;
@@ -630,20 +670,20 @@ public class PlayActivity extends AppCompatActivity {
 
                     if (tier_im1.getDrawable() == null) {
                         tier_im1.setImageResource(R.drawable.circle);
-                        tier_5_win++;
+                        tier_5_win1++;
                     } else if (tier_im2.getDrawable() == null) {
                         tier_im2.setImageResource(R.drawable.circle);
-                        tier_5_win++;
+                        tier_5_win2++;
                     } else if (tier_im3.getDrawable() == null) {
                         tier_im3.setImageResource(R.drawable.circle);
-                        tier_5_win++;
+                        tier_5_win3++;
                     } else if (tier_im4.getDrawable() == null) {
                         tier_im4.setImageResource(R.drawable.circle);
-                        tier_5_win++;
+                        tier_5_win4++;
                     } else if (tier_im5.getDrawable() == null) {
                         tier_im5.setImageResource(R.drawable.circle);
-                        tier_5_win++;
-                        if (tier_5_win >= 3) {
+                        tier_5_win5++;
+                        if (tier_5_win1 + tier_5_win2 + tier_5_win3 + tier_5_win4 + tier_5_win5 >= 3) {
                             nowtier++;
                             refresh();
                         }
@@ -652,15 +692,21 @@ public class PlayActivity extends AppCompatActivity {
                 if (randomNum > power){
                     if (tier_im1.getDrawable() == null) {
                         tier_im1.setImageResource(R.drawable.x);
+                        tier_5_lose1++;
                     } else if (tier_im2.getDrawable() == null) {
                         tier_im2.setImageResource(R.drawable.x);
+                        tier_5_lose2++;
                     } else if (tier_im3.getDrawable() == null) {
                         tier_im3.setImageResource(R.drawable.x);
+                        tier_5_lose3++;
                     } else if (tier_im4.getDrawable() == null) {
                         tier_im4.setImageResource(R.drawable.x);
+                        tier_5_lose4++;
                     } else if (tier_im5.getDrawable() == null) {
                         tier_im5.setImageResource(R.drawable.x);
-                        if (tier_5_win >= 3) {
+                        tier_5_lose5++;
+                        if (tier_5_win1 + tier_5_win2 + tier_5_win3 + tier_5_win4 + tier_5_win5 >= 3) {
+                            nowtier++;
                             refresh();
                         }
                     }

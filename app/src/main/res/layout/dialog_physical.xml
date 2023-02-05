@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <TextView
+                android:id="@+id/p_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -33,6 +34,36 @@
                 android:layout_margin="20dp"
                 android:gravity="center"
                 android:fontFamily="@font/medium"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="육체 피로도 + 30"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="      "
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="육체 피로도 최대 5 +"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/light"/>
+
+
+            </LinearLayout>
         </FrameLayout>
         //최대치 도박 (부상)
 
